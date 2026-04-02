@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nourhan Hamada | Data Analyst</title>
+
+<style>
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+/* NAVBAR */
+nav {
+    background: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    text-decoration: none;
+    margin-left: 20px;
+    color: #1e293b;
+    font-weight: 500;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: white;
+}
+
+.hero h1 { font-size: 42px; }
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: white;
+    color: #1e3a8a;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* SECTION */
+section {
+    padding: 60px 10%;
+}
+
+h2 {
+    color: #1e3a8a;
+}
+
+/* SKILLS */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    background: #e2e8f0;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+/* PROJECTS */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* TAGS */
+.tag {
+    background: #dbeafe;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+}
+
+footer {
+    background: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <strong>Nourhan Hamada</strong>
+    <div>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>Nourhan Hamada Elhaddad</h1>
+    <p>Turning Data into Insights | Data Analyst & ML Engineer</p>
+    <a class="btn" href="#projects">Explore My Work</a>
+</div>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        Data Science and AI undergraduate with hands-on experience in Python, machine learning,
+        data analysis, and data visualization. Skilled in SQL and Power BI, building end-to-end
+        solutions including predictive models, recommendation systems, and interactive dashboards.
+    </p>
+
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="skill">Python</div>
+        <div class="skill">SQL</div>
+        <div class="skill">Java</div>
+        <div class="skill">Power BI</div>
+        <div class="skill">Excel</div>
+        <div class="skill">Machine Learning</div>
+        <div class="skill">NLP</div>
+        <div class="skill">Time Series</div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="projects">
+
+        <div class="card">
+            <h3>🎧 Spotify Tracks Analysis Dashboard</h3>
+
+            <!-- ADD IMAGE HERE LATER -->
+            <!-- <img src="spotify.png" style="width:100%; border-radius:10px;"> -->
+
+            <p>
+                Interactive Power BI dashboard analyzing Spotify tracks using audio features
+                and popularity metrics with advanced KPI tracking and feature engineering.
+            </p>
+
+            <a class="btn" href="https://github.com/nourhan247/Spotify-Dashboard-using-Power-BI.git" target="_blank">
+                View Project
+            </a>
+
+            <br><br>
+            <span class="tag">Power BI</span>
+            <span class="tag">DAX</span>
+            <span class="tag">Analytics</span>
+        </div>
+
+        <div class="card">
+            <h3>Customer Churn Prediction System</h3>
+            <p>ML models to predict churn using Random Forest, XGBoost & Logistic Regression.</p>
+            <span class="tag">Python</span>
+            <span class="tag">ML</span>
+        </div>
+
+        <div class="card">
+            <h3>HR Attrition Dashboard</h3>
+            <p>Power BI dashboard analyzing employee attrition trends.</p>
+            <span class="tag">Power BI</span>
+        </div>
+
+        <div class="card">
+            <h3>EEG Mental State Analysis</h3>
+            <p>Used Hidden Markov Models to predict cognitive states.</p>
+            <span class="tag">Python</span>
+            <span class="tag">NLP</span>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email: nourhanhamada24@gmail.com</p>
+    <p>Phone: 01283426874</p>
+    <p>LinkedIn: linkedin.com/in/nourhanhamada24</p>
+</section>
+
+<footer>
+    © 2026 Nourhan Hamada
+</footer>
+
+</body>
+</html>
