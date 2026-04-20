@@ -160,26 +160,35 @@ footer {
 
     <div class="projects">
 
-        <div class="card">
-            <h3>🎧 Spotify Tracks Analysis Dashboard</h3>
+<div class="card">
+    <h3>🎧 Spotify Tracks Analysis Dashboard</h3>
 
-            <!-- ADD IMAGE HERE LATER -->
-            <!-- <img src="spotify.png" style="width:100%; border-radius:10px;"> -->
+    <!-- SLIDESHOW -->
+    <div class="slideshow-container">
 
-            <p>
-                Interactive Power BI dashboard analyzing Spotify tracks using audio features
-                and popularity metrics with advanced KPI tracking and feature engineering.
-            </p>
+        <img class="slide" src="Screenshot 2026-04-02 175847.png" style="width:100%; border-radius:10px;">
+        <img class="slide" src="Screenshot 2026-04-02 175911.png" style="width:100%; border-radius:10px; display:none;">
 
-            <a class="btn" href="https://github.com/nourhan247/Spotify-Dashboard-using-Power-BI.git" target="_blank">
-                View Project
-            </a>
+        <button onclick="changeSlide(-1)" style="margin-top:10px; padding:5px 10px;">⬅ Prev</button>
+        <button onclick="changeSlide(1)" style="margin-top:10px; padding:5px 10px;">Next ➡</button>
+    </div>
 
-            <br><br>
-            <span class="tag">Power BI</span>
-            <span class="tag">DAX</span>
-            <span class="tag">Analytics</span>
-        </div>
+    <p>
+        Interactive Power BI dashboard analyzing Spotify tracks using audio features
+        and popularity metrics with advanced KPI tracking and feature engineering.
+    </p>
+
+    <a class="btn" href="https://github.com/nourhan247/Spotify-Dashboard-using-Power-BI.git" target="_blank">
+        View Project
+    </a>
+
+    <br><br>
+    <span class="tag">Power BI</span>
+    <span class="tag">DAX</span>
+    <span class="tag">Analytics</span>
+     </div>
+
+        
 
         <div class="card">
             <h3>Customer Churn Prediction System</h3>
@@ -190,11 +199,15 @@ footer {
             </p>
             <span class="tag">RFM</span>
             <span class="tag">ML</span>
-            <span class="tag">PowerBI</span>
+            <span class="tag">Power BI</span>
         </div>
 
         <div class="card">
             <h3>HR Attrition Dashboard</h3>
+            <img src="Screenshot 2026-03-15 222342.png" style="width:100%; border-radius:10px;">
+            
+
+            
             <p>Power BI dashboard analyzing employee attrition trends.</p>
             <span class="tag">Power BI</span>
         </div>
