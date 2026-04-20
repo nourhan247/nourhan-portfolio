@@ -114,7 +114,36 @@ footer {
     text-align: center;
     padding: 20px;
 }
+    .slideshow-container img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover zoom effect */
+.slideshow-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Buttons */
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.controls button {
+    margin: 5px;
+    padding: 5px 10px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
 </style>
+    
 </head>
 
 <body>
@@ -150,8 +179,10 @@ footer {
         <div class="skill">Power BI</div>
         <div class="skill">Excel</div>
         <div class="skill">Machine Learning</div>
-        <div class="skill">NLP</div>
         <div class="skill">Time Series</div>
+        <div class="skill">Neural Network</div>
+        <div class="skill">NLP</div>
+        
     </div>
 </section>
 
@@ -202,15 +233,29 @@ footer {
             <span class="tag">Power BI</span>
         </div>
 
-        <div class="card">
-            <h3>HR Attrition Dashboard</h3>
-            <img src="Screenshot 2026-03-15 222342.png" style="width:100%; border-radius:10px;">
-            
+<div class="card">
+    <h3>HR Attrition Dashboard</h3>
 
-            
-            <p>Power BI dashboard analyzing employee attrition trends.</p>
-            <span class="tag">Power BI</span>
+    <div class="slideshow-container">
+
+        <img class="slide-hr" src="Screenshot 2026-02-24 211710.png">
+        <img class="slide-hr" src="Screenshot 2026-02-24 211724.png" style="display:none;">
+        <img class="slide-hr" src="Screenshot 2026-02-24 211735.png" style="display:none;">
+        <img class="slide-hr" src="Screenshot 2026-02-24 211744.png" style="display:none;">
+
+        <div class="controls">
+            <button onclick="changeHRSlide(-1)">⬅</button>
+            <button onclick="changeHRSlide(1)">➡</button>
         </div>
+    </div>
+
+    <p>
+        Developed a Power BI dashboard to analyze employee attrition trends,
+        including a high-risk matrix to identify and segment employees most likely to leave.
+    </p>
+
+    <span class="tag">Power BI</span>
+</div>
 
         <div class="card">
             <h3>EEG Mental State Analysis</h3>
@@ -303,6 +348,54 @@ function changeSlide(step) {
 
     showSlide(currentSlide);
 }
+        
+</script>
+    <script>
+let hrIndex = 0;
+const hrSlides = document.getElementsByClassName("slide-hr");
+
+function showHRSlide(index) {
+    for (let i = 0; i < hrSlides.length; i++) {
+        hrSlides[i].style.display = "none";
+    }
+    hrSlides[index].style.display = "block";
+}
+
+function changeHRSlide(step) {
+    hrIndex += step;
+
+    if (hrIndex >= hrSlides.length) hrIndex = 0;
+    if (hrIndex < 0) hrIndex = hrSlides.length - 1;
+
+    showHRSlide(hrIndex);
+}
+</script>
+    <script>
+document.querySelectorAll('.slideshow-container img').forEach(img => {
+    img.onclick = function () {
+        let modal = document.createElement('div');
+        modal.style.position = 'fixed';
+        modal.style.top = 0;
+        modal.style.left = 0;
+        modal.style.width = '100%';
+        modal.style.height = '100%';
+        modal.style.background = 'rgba(0,0,0,0.8)';
+        modal.style.display = 'flex';
+        modal.style.justifyContent = 'center';
+        modal.style.alignItems = 'center';
+
+        let fullImg = document.createElement('img');
+        fullImg.src = this.src;
+        fullImg.style.maxWidth = '90%';
+        fullImg.style.borderRadius = '10px';
+
+        modal.appendChild(fullImg);
+
+        modal.onclick = () => document.body.removeChild(modal);
+
+        document.body.appendChild(modal);
+    };
+});
 </script>
 
 </body>
