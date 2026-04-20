@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -92,10 +92,19 @@ h2 {
     transition: 0.3s;
     overflow: visible;
 }
-
-.card:hover {
-    transform: translateY(-8px);
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.4s ease, box-shadow 0.3s;
+    cursor: pointer;
 }
+
+/* Hover zoom for ALL images */
+.card img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
 
 /* TAGS */
 .tag {
@@ -108,15 +117,16 @@ h2 {
 /* SLIDESHOW */
 
 .slideshow-container {
-    overflow: hidden; /* keeps zoom clean */
+    overflow: hidden;
     border-radius: 10px;
 }
-.slideshow-container img {
+    
+/* .slideshow-container img {
     width: 100%;
     border-radius: 10px;
     transition: transform 0.4s ease, box-shadow 0.3s;
     cursor: pointer;
-}
+} */
 
 /* Hover zoom */
 .slideshow-container img:hover {
@@ -352,4 +362,4 @@ function changeHRSlide(step) {
 
 </body>
 </html>
-```
+
