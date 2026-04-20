@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -103,6 +104,42 @@ h2 {
     font-size: 12px;
 }
 
+/* SLIDESHOW */
+.slideshow-container img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.slideshow-container img:hover {
+    transform: scale(1.05);
+}
+
+/* BUTTON STYLE */
+.slideshow-btn {
+    padding: 8px 15px;
+    border: none;
+    background: #1e3a8a;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.slideshow-btn:hover {
+    background: #2563eb;
+}
+
+/* CENTER BUTTONS */
+.controls, .slide-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
 /* CONTACT */
 .contact {
     text-align: center;
@@ -114,36 +151,7 @@ footer {
     text-align: center;
     padding: 20px;
 }
-    .slideshow-container img {
-    width: 100%;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-/* Hover zoom effect */
-.slideshow-container img:hover {
-    transform: scale(1.05);
-}
-
-/* Buttons */
-.controls {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.controls button {
-    margin: 5px;
-    padding: 5px 10px;
-    border: none;
-    background: #2563eb;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
 </style>
-    
 </head>
 
 <body>
@@ -167,238 +175,101 @@ footer {
     <h2>About Me</h2>
     <p>
         Data Science and AI undergraduate with hands-on experience in Python, machine learning,
-        data analysis, and data visualization. Skilled in SQL and Power BI, building end-to-end
-        solutions including predictive models, recommendation systems, and interactive dashboards.
+        data analysis, and data visualization.
     </p>
 
     <h2>Skills</h2>
     <div class="skills">
         <div class="skill">Python</div>
         <div class="skill">SQL</div>
-        <div class="skill">Java</div>
         <div class="skill">Power BI</div>
-        <div class="skill">Excel</div>
         <div class="skill">Machine Learning</div>
-        <div class="skill">Time Series</div>
         <div class="skill">Neural Network</div>
-        <div class="skill">NLP</div>
-        
     </div>
 </section>
 
 <section id="projects">
-    <h2>Projects</h2>
+<h2>Projects</h2>
 
-    <div class="projects">
+<div class="projects">
 
+<!-- SPOTIFY -->
 <div class="card">
-    <h3>🎧 Spotify Tracks Analysis Dashboard</h3>
+<h3>🎧 Spotify Dashboard</h3>
 
-    <!-- SLIDESHOW -->
-    <div class="slideshow-container">
-
-        <img class="slide" src="Screenshot 2026-04-02 175847.png" style="width:100%; border-radius:10px;">
-        <img class="slide" src="Screenshot 2026-04-02 175911.png" style="width:100%; border-radius:10px; display:none;">
-
-        <button onclick="changeSlide(-1)" style="margin-top:10px; padding:5px 10px;">⬅ Prev</button>
-        <button onclick="changeSlide(1)" style="margin-top:10px; padding:5px 10px;">Next ➡</button>
-    </div>
-
-    <p>
-        Interactive Power BI dashboard analyzing Spotify tracks using audio features
-        and popularity metrics with advanced KPI tracking and feature engineering.
-    </p>
-
-    <a class="btn" href="https://github.com/nourhan247/Spotify-Dashboard-using-Power-BI.git" target="_blank">
-        View Project
-    </a>
-
-    <br><br>
-    <span class="tag">Power BI</span>
-    <span class="tag">DAX</span>
-    <span class="tag">Analytics</span>
-     </div>
-
-        
-
-        <div class="card">
-            <h3>Customer Churn Prediction System</h3>
-            <img src="Screenshot 2026-03-15 222342.png" style="width:100%; border-radius:10px;">
-            <p>
-                Developed ML models for customer churn prediction using Random Forest, XGBoost, and Logistic Regression. 
-                Performed RFM (Recency, Frequency, Monetary) analysis and created an interactive Power BI dashboard to visualize customer behavior and business insights.
-            </p>
-            <span class="tag">RFM</span>
-            <span class="tag">ML</span>
-            <span class="tag">Power BI</span>
-        </div>
-
-<div class="card">
-    <h3>HR Attrition Dashboard</h3>
-
-    <div class="slideshow-container">
-
-        <img class="slide-hr" src="Screenshot 2026-02-24 211710.png">
-        <img class="slide-hr" src="Screenshot 2026-02-24 211724.png" style="display:none;">
-        <img class="slide-hr" src="Screenshot 2026-02-24 211735.png" style="display:none;">
-        <img class="slide-hr" src="Screenshot 2026-02-24 211744.png" style="display:none;">
-
-        <div class="controls">
-            <button onclick="changeHRSlide(-1)">⬅</button>
-            <button onclick="changeHRSlide(1)">➡</button>
-        </div>
-    </div>
-
-    <p>
-        Developed a Power BI dashboard to analyze employee attrition trends,
-        including a high-risk matrix to identify and segment employees most likely to leave.
-    </p>
-    <a class="btn" href="https://github.com/nourhan247/HR-Analysis.git" target="_blank">
-    
-
-    <span class="tag">Power BI</span>
+<div class="slideshow-container">
+<img class="slide" src="Screenshot 2026-04-02 175847.png">
+<img class="slide" src="Screenshot 2026-04-02 175911.png" style="display:none;">
 </div>
 
-        <div class="card">
-            <h3>EEG Mental State Analysis</h3>
-            <p>Used Hidden Markov Models to predict cognitive states.</p>
-            <span class="tag">Python</span>
-            <span class="tag">NLP</span>
-        </div>
-        <div class="card">
-    <h3>🚗 Car Insurance Fraud Detection System</h3>
-
-    <!-- OPTIONAL IMAGE PLACEHOLDER -->
-    <img src="car.jpg" style="width:100%; border-radius:10px;"> 
-
-    <p>
-        End-to-end Machine Learning and Deep Learning system for detecting fraudulent insurance claims.
-        Built with full pipeline including preprocessing, feature engineering, and deployment.
-    </p>
-
-    <p>
-        Used multiple ML models (Random Forest, XGBoost, LightGBM, SVM, KNN) and a Neural Network with TensorFlow/Keras.
-        Handled class imbalance using KMeansSMOTE for deep learning and oversampling techniques for ML models.
-        Improved performance using stacking ensemble and precision-recall threshold tuning.
-    </p>
-
-    <p>
-        Deployed using FastAPI for real-time predictions and Streamlit for an interactive user interface.
-    </p>
-
-    <a class="btn" href="https://github.com/nourhan247/Car-Insurance-Fraud-Detection.git" target="_blank">
-        View Project
-    </a>
-
-    <br><br>
-
-    <span class="tag">Python</span>
-    <span class="tag">Machine Learning</span>
-    <span class="tag">Deep Learning</span>
-    <span class="tag">Neural Networks</span>
-    <span class="tag">KMeansSMOTE</span>
-    <span class="tag">FastAPI</span>
-    <span class="tag">Streamlit</span>
+<div class="slide-buttons">
+<button class="slideshow-btn" onclick="changeSlide(-1)">⬅</button>
+<button class="slideshow-btn" onclick="changeSlide(1)">➡</button>
 </div>
 
-    </div>
+<p>Power BI dashboard analyzing Spotify tracks.</p>
+
+<a class="btn" href="https://github.com/nourhan247/Spotify-Dashboard-using-Power-BI.git" target="_blank">View Project</a>
+
+</div>
+
+<!-- HR -->
+<div class="card">
+<h3>HR Attrition Dashboard</h3>
+
+<div class="slideshow-container">
+<img class="slide-hr" src="Screenshot 2026-02-24 211710.png">
+<img class="slide-hr" src="Screenshot 2026-02-24 211724.png" style="display:none;">
+</div>
+
+<div class="controls">
+<button class="slideshow-btn" onclick="changeHRSlide(-1)">⬅</button>
+<button class="slideshow-btn" onclick="changeHRSlide(1)">➡</button>
+</div>
+
+<p>Power BI dashboard with high-risk matrix.</p>
+
+<a class="btn" href="https://github.com/nourhan247/HR-Analysis.git" target="_blank">View Project</a>
+
+</div>
+
+</div>
 </section>
 
-<section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>
-    📧Email:
-    <a href="mailto:nourhanhamada24@gmail.com" class="contact-link">
-        nourhanhamada24@gmail.com
-    </a>
-</p>
-    <p>
-    💬Phone:
-    <a href="https://wa.me/201283426874" target="_blank" class="contact-link">
-        Chat on WhatsApp
-    </a>
-</p>
-    <a href="https://www.linkedin.com/in/nourhan-hamada24/" target="_blank" class="btn">
-    🔗 LinkedIn Profile
-</a>
-</section>
+<footer>© 2026 Nourhan</footer>
 
-<footer>
-    © 2026 Nourhan Hamada
-</footer>
-    <script>
+<script>
+// Spotify
 let currentSlide = 0;
 const slides = document.getElementsByClassName("slide");
 
-function showSlide(index) {
+function changeSlide(step) {
+    currentSlide += step;
+    if (currentSlide >= slides.length) currentSlide = 0;
+    if (currentSlide < 0) currentSlide = slides.length - 1;
+
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-
-    slides[index].style.display = "block";
+    slides[currentSlide].style.display = "block";
 }
 
-function changeSlide(step) {
-    currentSlide += step;
-
-    if (currentSlide >= slides.length) {
-        currentSlide = 0;
-    }
-    if (currentSlide < 0) {
-        currentSlide = slides.length - 1;
-    }
-
-    showSlide(currentSlide);
-}
-        
-</script>
-    <script>
+// HR
 let hrIndex = 0;
 const hrSlides = document.getElementsByClassName("slide-hr");
 
-function showHRSlide(index) {
-    for (let i = 0; i < hrSlides.length; i++) {
-        hrSlides[i].style.display = "none";
-    }
-    hrSlides[index].style.display = "block";
-}
-
 function changeHRSlide(step) {
     hrIndex += step;
-
     if (hrIndex >= hrSlides.length) hrIndex = 0;
     if (hrIndex < 0) hrIndex = hrSlides.length - 1;
 
-    showHRSlide(hrIndex);
+    for (let i = 0; i < hrSlides.length; i++) {
+        hrSlides[i].style.display = "none";
+    }
+    hrSlides[hrIndex].style.display = "block";
 }
-</script>
-    <script>
-document.querySelectorAll('.slideshow-container img').forEach(img => {
-    img.onclick = function () {
-        let modal = document.createElement('div');
-        modal.style.position = 'fixed';
-        modal.style.top = 0;
-        modal.style.left = 0;
-        modal.style.width = '100%';
-        modal.style.height = '100%';
-        modal.style.background = 'rgba(0,0,0,0.8)';
-        modal.style.display = 'flex';
-        modal.style.justifyContent = 'center';
-        modal.style.alignItems = 'center';
-
-        let fullImg = document.createElement('img');
-        fullImg.src = this.src;
-        fullImg.style.maxWidth = '90%';
-        fullImg.style.borderRadius = '10px';
-
-        modal.appendChild(fullImg);
-
-        modal.onclick = () => document.body.removeChild(modal);
-
-        document.body.appendChild(modal);
-    };
-});
 </script>
 
 </body>
 </html>
+```
