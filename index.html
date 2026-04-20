@@ -189,51 +189,123 @@ footer {
 </section>
 
 <section id="projects">
-<h2>Projects</h2>
+    <h2>Projects</h2>
 
-<div class="projects">
+    <div class="projects">
 
-<!-- SPOTIFY -->
-<div class="card">
-<h3>🎧 Spotify Dashboard</h3>
+        <!-- SPOTIFY -->
+        <div class="card">
+            <h3>🎧 Spotify Tracks Analysis Dashboard</h3>
 
-<div class="slideshow-container">
-<img class="slide" src="Screenshot 2026-04-02 175847.png">
-<img class="slide" src="Screenshot 2026-04-02 175911.png" style="display:none;">
-</div>
+            <div class="slideshow-container">
+                <img class="slide" src="Screenshot 2026-04-02 175847.png">
+                <img class="slide" src="Screenshot 2026-04-02 175911.png" style="display:none;">
+            </div>
 
-<div class="slide-buttons">
-<button class="slideshow-btn" onclick="changeSlide(-1)">⬅</button>
-<button class="slideshow-btn" onclick="changeSlide(1)">➡</button>
-</div>
+            <div class="slide-buttons">
+                <button class="slideshow-btn" onclick="changeSlide(-1)">⬅ Prev</button>
+                <button class="slideshow-btn" onclick="changeSlide(1)">Next ➡</button>
+            </div>
 
-<p>Power BI dashboard analyzing Spotify tracks.</p>
+            <p>
+                Interactive Power BI dashboard analyzing Spotify tracks using audio features
+                and popularity metrics with advanced KPI tracking and feature engineering.
+            </p>
 
-<a class="btn" href="https://github.com/nourhan247/Spotify-Dashboard-using-Power-BI.git" target="_blank">View Project</a>
+            <a class="btn" href="https://github.com/nourhan247/Spotify-Dashboard-using-Power-BI.git" target="_blank">
+                View Project
+            </a>
 
-</div>
+            <br><br>
+            <span class="tag">Power BI</span>
+            <span class="tag">DAX</span>
+            <span class="tag">Analytics</span>
+        </div>
 
-<!-- HR -->
-<div class="card">
-<h3>HR Attrition Dashboard</h3>
+        <!-- CHURN -->
+        <div class="card">
+            <h3>Customer Churn Prediction System</h3>
+            <img src="Screenshot 2026-03-15 222342.png" style="width:100%; border-radius:10px;">
+            
+            <p>
+                Developed ML models for customer churn prediction using Random Forest, XGBoost, and Logistic Regression. 
+                Performed RFM analysis and created a Power BI dashboard for customer insights.
+            </p>
 
-<div class="slideshow-container">
-<img class="slide-hr" src="Screenshot 2026-02-24 211710.png">
-<img class="slide-hr" src="Screenshot 2026-02-24 211724.png" style="display:none;">
-</div>
+            <span class="tag">RFM</span>
+            <span class="tag">ML</span>
+            <span class="tag">Power BI</span>
+        </div>
 
-<div class="controls">
-<button class="slideshow-btn" onclick="changeHRSlide(-1)">⬅</button>
-<button class="slideshow-btn" onclick="changeHRSlide(1)">➡</button>
-</div>
+        <!-- HR -->
+        <div class="card">
+            <h3>HR Attrition Dashboard</h3>
 
-<p>Power BI dashboard with high-risk matrix.</p>
+            <div class="slideshow-container">
+                <img class="slide-hr" src="Screenshot 2026-02-24 211710.png">
+                <img class="slide-hr" src="Screenshot 2026-02-24 211724.png" style="display:none;">
+                <img class="slide-hr" src="Screenshot 2026-02-24 211735.png" style="display:none;">
+                <img class="slide-hr" src="Screenshot 2026-02-24 211744.png" style="display:none;">
+            </div>
 
-<a class="btn" href="https://github.com/nourhan247/HR-Analysis.git" target="_blank">View Project</a>
+            <div class="controls">
+                <button class="slideshow-btn" onclick="changeHRSlide(-1)">⬅</button>
+                <button class="slideshow-btn" onclick="changeHRSlide(1)">➡</button>
+            </div>
 
-</div>
+            <p>
+                Developed a Power BI dashboard to analyze employee attrition trends,
+                including a high-risk matrix to identify employees most likely to leave.
+            </p>
 
-</div>
+            <a class="btn" href="https://github.com/nourhan247/HR-Analysis.git" target="_blank">
+                View Project
+            </a>
+
+            <br><br>
+            <span class="tag">Power BI</span>
+        </div>
+
+        <!-- EEG -->
+        <div class="card">
+            <h3>EEG Mental State Analysis</h3>
+            <p>Used Hidden Markov Models to predict cognitive states.</p>
+            <span class="tag">Python</span>
+            <span class="tag">NLP</span>
+        </div>
+
+        <!-- FRAUD -->
+        <div class="card">
+            <h3>🚗 Car Insurance Fraud Detection System</h3>
+
+            <img src="car.jpg" style="width:100%; border-radius:10px;">
+
+            <p>
+                End-to-end ML & Deep Learning system for fraud detection using Random Forest, XGBoost,
+                LightGBM, and Neural Networks.
+            </p>
+
+            <p>
+                Applied oversampling for ML models and KMeansSMOTE for deep learning.
+                Built stacking ensemble and optimized threshold using precision-recall.
+            </p>
+
+            <p>
+                Deployed using FastAPI and Streamlit for real-time predictions.
+            </p>
+
+            <a class="btn" href="https://github.com/nourhan247/Car-Insurance-Fraud-Detection.git" target="_blank">
+                View Project
+            </a>
+
+            <br><br>
+            <span class="tag">ML</span>
+            <span class="tag">DL</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Streamlit</span>
+        </div>
+
+    </div>
 </section>
 
 <footer>© 2026 Nourhan</footer>
