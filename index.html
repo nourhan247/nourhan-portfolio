@@ -279,6 +279,31 @@ footer {
 <footer>
     © 2026 Nourhan Hamada
 </footer>
+    <script>
+let currentSlide = 0;
+const slides = document.getElementsByClassName("slide");
+
+function showSlide(index) {
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slides[index].style.display = "block";
+}
+
+function changeSlide(step) {
+    currentSlide += step;
+
+    if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    }
+    if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
+    }
+
+    showSlide(currentSlide);
+}
+</script>
 
 </body>
 </html>
