@@ -118,12 +118,35 @@ h2 {
 }
 
 /* ✨ MAGIC HOVER */
-.card img:hover {
+/* .card img:hover {
     transform: scale(1.5);
     z-index: 1000;
     box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+} */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
 }
 
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    transform: scale(1);
+}
+
+.lightbox.show {
+    display: flex;
+}
 
 /* TAGS */
 .tag {
@@ -235,8 +258,8 @@ footer {
             <h3>🎧 Spotify Tracks Analysis Dashboard</h3>
 
             <div class="slideshow-container">
-                <img class="slide" src="Screenshot 2026-04-02 175847.png">
-                <img class="slide" src="Screenshot 2026-04-02 175911.png" style="display:none;">
+                <img class="slide" src="Screenshot 2026-04-02 175847.png" onclick="openLightbox(this)">
+                <img class="slide" src="Screenshot 2026-04-02 175911.png"  onclick="openLightbox(this)">
             </div>
 
             <div class="slide-buttons">
@@ -262,7 +285,7 @@ footer {
         <!-- CHURN -->
         <div class="card">
             <h3>Customer Churn Prediction System</h3>
-            <img src="Screenshot 2026-03-15 222342.png" style="width:100%; border-radius:10px;">
+            <img src="Screenshot 2026-03-15 222342.png" style="width:100%; border-radius:10px;" onclick="openLightbox(this)">
             
             <p>
                 Developed ML models for customer churn prediction using Random Forest, XGBoost, and Logistic Regression. 
@@ -279,10 +302,10 @@ footer {
             <h3>HR Attrition Dashboard</h3>
 
             <div class="slideshow-container">
-                <img class="slide-hr" src="Screenshot 2026-02-24 211710.png">
-                <img class="slide-hr" src="Screenshot 2026-02-24 211724.png" style="display:none;">
-                <img class="slide-hr" src="Screenshot 2026-02-24 211735.png" style="display:none;">
-                <img class="slide-hr" src="Screenshot 2026-02-24 211744.png" style="display:none;">
+                <img class="slide-hr" src="Screenshot 2026-02-24 211710.png" onclick="openLightbox(this)">
+                <img class="slide-hr" src="Screenshot 2026-02-24 211724.png"  onclick="openLightbox(this)">
+                <img class="slide-hr" src="Screenshot 2026-02-24 211735.png"  onclick="openLightbox(this)">
+                <img class="slide-hr" src="Screenshot 2026-02-24 211744.png"  onclick="openLightbox(this)">
             </div>
 
             <div class="controls">
@@ -315,7 +338,7 @@ footer {
         <div class="card">
             <h3>🚗 Car Insurance Fraud Detection System</h3>
 
-            <img src="car.jpg" style="width:100%; border-radius:10px;">
+            <img src="car.jpg" style="width:100%; border-radius:10px;" onclick="openLightbox(this)">
 
             <p>
                 End-to-end ML & Deep Learning system for fraud detection using Random Forest, XGBoost,
@@ -348,6 +371,17 @@ footer {
 <footer>© 2026 Nourhan</footer>
 
 <script>
+    function openLightbox(img) {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    lightboxImg.src = img.src;
+    lightbox.classList.add("show");
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").classList.remove("show");
+}
 // Spotify
 let currentSlide = 0;
 const slides = document.getElementsByClassName("slide");
@@ -378,7 +412,9 @@ function changeHRSlide(step) {
     hrSlides[hrIndex].style.display = "block";
 }
 </script>
-
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+</div>
 </body>
 </html>
 
