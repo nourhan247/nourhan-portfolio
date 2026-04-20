@@ -90,6 +90,7 @@ h2 {
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     transition: 0.3s;
+    overflow: visible;
 }
 
 .card:hover {
@@ -105,15 +106,22 @@ h2 {
 }
 
 /* SLIDESHOW */
+
+.slideshow-container {
+    overflow: hidden; /* keeps zoom clean */
+    border-radius: 10px;
+}
 .slideshow-container img {
     width: 100%;
     border-radius: 10px;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease, box-shadow 0.3s;
     cursor: pointer;
 }
 
+/* Hover zoom */
 .slideshow-container img:hover {
-    transform: scale(1.05);
+    transform: scale(1.08); /* stronger zoom */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* depth effect */
 }
 
 /* BUTTON STYLE */
